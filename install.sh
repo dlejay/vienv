@@ -43,7 +43,7 @@ say "Installed environment.txt"
 
 # Add vienv() if not already present in .zshrc
 ZSHRC=${ZDOTDIR:-$HOME}/.zshrc
-! grep -sq ^vienv\(\) $ZSHRC && cat vienv.sh >> $ZSHRC
+! grep -sq ^vienv\(\) "$ZSHRC" && cat vienv.sh >> "$ZSHRC"
 
 say "The function vienv() was added to your .zshrc."
 say ""
