@@ -1,0 +1,58 @@
+.\" Manpage for vienv
+
+.TH vienv help "21 Sep 2021" "1.0" "vienv help page"
+
+.SH NAME
+vienv \- edit the file environment.txt and reload environment.plist
+
+.SH SYNOPSIS
+vienv [?]
+
+.SH OPTIONS
+.TP
+.BR ?
+Display this help page
+
+
+.SH DESCRIPTION
+The vienv utility edits the file environment.txt which is located in
+.br
+	$XDG_DATA_HOME/Environment
+.br
+if XDG_DATA_HOME is set, or in
+.br
+	~/Library/Application Support/Environment
+.br
+otherwise;
+it then reloads the file environment.plist placed in
+.br
+	~/Library/LaunchAgents
+.br
+to set global environment variables so that they can be seen by GUI apps
+(setting the environment variables in a shell profile is sometimes not
+enough).
+
+The file environment.plist shall load automatically
+whenever you boot your Mac and set the environment variables.
+
+.SH CAUTION
+The new environment variables will only be accessible to
+apps started
+.I
+after
+using vienv.
+In addition, programs that start automatically at login will
+also need to be manually restarted
+in order to get access to the environment variables.
+
+.SH THEORY
+When a user logs in, macOS reads all .plist files in the folder
+.br
+	~/Library/LaunchAgents
+.br
+and executes the commands they contain.
+The file environment.plist contains commands to use setenv(1) to
+set the environment varialbes contained in environment.txt.
+
+.SH SEE ALSO
+https://github.com/dlejay/vienv
