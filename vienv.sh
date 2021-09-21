@@ -11,7 +11,10 @@ vienv(){
 		${VISUAL:-${EDITOR:-vi}} "$ENV_FOLDER"/environment.txt &&
 
 		# Reload the plist
-		launchctl unload ~/Library/LaunchAgents/environment.plist &&
+		if launchctl list | grep -q my.startup
+		then
+			launchctl unload ~/Library/LaunchAgents/environment.plist
+		fi
 		launchctl load ~/Library/LaunchAgents/environment.plist
 
 		# Say
