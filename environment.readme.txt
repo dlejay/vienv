@@ -1,0 +1,7 @@
+This file accompanies file environment.txt
+and is part of the vienv utility.
+The function vienv() should have been
+installed in your .zshrc.
+Type
+	$ vienv help
+to get more details.
