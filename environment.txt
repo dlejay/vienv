@@ -2,4 +2,4 @@ XDG_DATA_HOME=~/Library/"Application Support"
 XDG_CONFIG_HOME=~/Library/"Application Support"
 XDG_STATE_HOME=~/Library/"Application Support"
 XDG_CACHE_HOME=~/Library/Caches
-ZDOTDIR=$XDG_CONFIG_HOME/Zsh
+ZDOTDIR=~/Library/"Application Support"/Zsh
