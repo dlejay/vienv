@@ -62,7 +62,7 @@ the canonical method has changed over the years
 
 `vienv` uses the last method known to work
 (cf. [Ted Toal](https://superuser.com/questions/1609942/how-to-set-environment-variables-on-macos-using-a-gui),
-[EnvPane](https://github.com/hschmidt/EnvPane)):
+[EnvPane](https://github.com/hschmidt/EnvPane), [Machina Spectulatrix](https://mansfield-devine.com/speculatrix/2019/03/quicktip-setting-paths-on-macos/)):
 read a user file `environment.txt` containing the list of variables to be set
 and then use `launchctl setenv` on each element of that list. The method is then made automatic by writing those instructions
 in a file `~/Library/LaunchAgents/environment.plist` that shall be read and executed at each user login.
