@@ -35,8 +35,6 @@ for all GUI apps.
 As [scriptingosx.com](https://scriptingosx.com/2019/06/moving-to-zsh-part-2-configuration-files/) says:
 > On macOS, system wide changes to the PATH should be done by adding files to /etc/paths.d.
 
-if `.zprofile` is not enough for the GUI apps that you use.
-
 ## Uninstall
 
 ### Step 1
