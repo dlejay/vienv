@@ -5,7 +5,7 @@ vienv(){
 	if [ -n "$1" ]
 	then
 		# Read helper file
-		man "$ENV_FOLDER"/vienv.help
+		mandoc "$ENV_FOLDER"/vienv.help | less -s
 	else
 		# Edit the variable table
 		${VISUAL:-${EDITOR:-vi}} "$ENV_FOLDER"/environment.txt &&
